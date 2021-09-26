@@ -18,8 +18,8 @@ The performance evaluation starts with a single GPU in a single node and will be
 - Cores: 32 cores/node
 - RAM: 256 GB/node
 
-![alt text](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/M100.JPG)
 ![Image of the Node](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/M100.JPG)
+
 ## Distributed DataParallel
 
 The implementation of the Distributed Training is based on PyTorch. In particular, we used DistributedDataParallel (DDP) to split the model and data between different GPUs and to coordinate the training.
@@ -33,7 +33,7 @@ is calculated concurrently with the backwards pass to further alleviate the netw
 bottleneck. At the end of the backwards pass, every node has the averaged gradients,
 ensuring that the model weights stay synchronized.
 
-(figura)
+![Image of DDP](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/ddp.png)
 
 ## Performance Evaluation
 
@@ -41,19 +41,22 @@ The performance evaluation starts with a single GPU in a single node and will be
 
 ### Multiple GPUs in a Single Node
 
-All the experiments are done with 16 workers and 32 as batch-size
+All the experiments are done with 16 workers and 32 as batch-size.
 
-(imgs)
+![Image of MGSN](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/singlenode.png)
 
 ### Multiple GPUs in Multiple Nodes
 
-The batch-size and the number of workers is the same as before
+The batch-size and the number of workers is the same as before.
 
-(imgs)
+![Image of MGMN](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/multinode.png)
 
 ### Multiple Workers
 
+All the experiments are done with 4 GPUs and 32 as batch-size.
+
+![Image of MGSN](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/workers.png)
 
 ## Conclusion
 
-For a deep comprehension of the work and analysis of the performances I recommend you to read the Chapter 6 of my Thesis.
+For a deep comprehension of the work and other analyzes I recommend you to read the Chapter 6 of my Thesis.
