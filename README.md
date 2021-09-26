@@ -18,8 +18,8 @@ The performance evaluation starts with a single GPU in a single node and will be
 - Cores: 32 cores/node
 - RAM: 256 GB/node
 
-(figura)
-
+![alt text](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/M100.JPG)
+![Image of the Node](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/M100.JPG)
 ## Distributed DataParallel
 
 The implementation of the Distributed Training is based on PyTorch. In particular, we used DistributedDataParallel (DDP) to split the model and data between different GPUs and to coordinate the training.
