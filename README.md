@@ -20,7 +20,7 @@ The performance evaluation starts with a single GPU in a single node and will be
 
 ![Image of the Node](https://github.com/enricogherardi/Profiling-of-Distributed-Training/blob/main/images/M100.JPG)
 
-## Distributed DataParallel
+## Distributed Data Parallel (PyTorch)
 
 The implementation of the Distributed Training is based on PyTorch. In particular, we used DistributedDataParallel (DDP) to split the model and data between different GPUs and to coordinate the training.
 For DDP, the machine has one process per GPU, and each model
@@ -59,4 +59,4 @@ All the experiments are done with 4 GPUs and 32 as batch-size.
 
 ## Conclusion
 
-For a deep comprehension of the work and other analyzes I recommend you to read the Chapter 6 of my Thesis.
+For a more in-depth analysis I recommend you to read the Chapter 6 of my Thesis.
